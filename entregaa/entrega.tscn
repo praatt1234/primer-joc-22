@@ -1,0 +1,254 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://main scenes/escena terra.tscn" type="PackedScene" id=1]
+[ext_resource path="res://main scenes/cos.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entregaa/entrega.gd" type="Script" id=3]
+[ext_resource path="res://imatges/fons.jpg" type="Texture" id=4]
+[ext_resource path="res://imatges/portal.jpg" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 125.788, 10.5131 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="RectangleShape2D" id=5]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+[sub_resource type="RectangleShape2D" id=7]
+
+[sub_resource type="RectangleShape2D" id=8]
+
+[sub_resource type="RectangleShape2D" id=9]
+
+[sub_resource type="RectangleShape2D" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 476.25, 18.5 )
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 25.02
+
+[node name="Node2D" type="Node2D"]
+
+[node name="jon" parent="." groups=["Personatge"] instance=ExtResource( 2 )]
+modulate = Color( 0.152941, 0, 0.87451, 1 )
+position = Vector2( 19, 70 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="jon"]
+visible = false
+position = Vector2( -10, 2 )
+current = true
+
+[node name="Terra" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 516, 630 )
+
+[node name="Sotre" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 511, -30 )
+
+[node name="Dreta" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -30, 306 )
+rotation = 1.5708
+scale = Vector2( 2.94296, 2.99996 )
+
+[node name="inici" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0, 0.0392157, 1, 1 )
+position = Vector2( 22, 92.0001 )
+scale = Vector2( 0.179, -0.35 )
+
+[node name="1" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.266667, 0, 1, 1 )
+self_modulate = Color( 0.266667, 0, 1, 1 )
+position = Vector2( 112, 399 )
+scale = Vector2( 0.098, 20.135 )
+
+[node name="2" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.266667, 0, 1, 1 )
+position = Vector2( 252, 433 )
+scale = Vector2( 0.107, 16.693 )
+
+[node name="3" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.266667, 0, 1, 1 )
+position = Vector2( 380, 487 )
+rotation = 1.5708
+scale = Vector2( 0.906, -1.242 )
+
+[node name="4" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.266667, 0, 1, 1 )
+position = Vector2( 497.812, 480 )
+rotation = 1.5708
+scale = Vector2( 0.961, -1.179 )
+
+[node name="5" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.266667, 0, 1, 1 )
+position = Vector2( 608, 483 )
+rotation = 1.5708
+scale = Vector2( 0.936, -1.179 )
+
+[node name="6" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.266667, 0, 1, 1 )
+position = Vector2( 702, 466 )
+rotation = 1.5708
+scale = Vector2( -1.12235, -1.31702 )
+
+[node name="7" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.266667, 0, 1, 1 )
+position = Vector2( 804, 460 )
+rotation = 1.5708
+scale = Vector2( 1.1, -1.587 )
+
+[node name="final" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.0313726, 0, 1, 1 )
+position = Vector2( 945, 549 )
+rotation = 1.5708
+scale = Vector2( 0.426648, -1.17863 )
+
+[node name="block 1" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.117647, 0.443137, 0.54902, 1 )
+position = Vector2( 109, 71 )
+rotation = 1.5708
+scale = Vector2( 0.571, -1.179 )
+
+[node name="Area2D" type="Area2D" parent="block 1"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="block 1/Area2D"]
+position = Vector2( 0.664474, -0.513115 )
+rotation = -1.14397e-13
+scale = Vector2( 0.993795, 0.927025 )
+shape = SubResource( 3 )
+
+[node name="block 2" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.117647, 0.443137, 0.54902, 1 )
+position = Vector2( 379, 165 )
+rotation = 1.5708
+scale = Vector2( 1.331, -1.206 )
+
+[node name="Area2D" type="Area2D" parent="block 2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block 2/Area2D"]
+scale = Vector2( 12.5414, 1.05405 )
+shape = SubResource( 4 )
+
+[node name="block 3" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.117647, 0.443137, 0.54902, 1 )
+position = Vector2( 608, 155 )
+rotation = 1.5708
+scale = Vector2( 1.246, -1.179 )
+
+[node name="Area2D" type="Area2D" parent="block 3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block 3/Area2D"]
+scale = Vector2( 12.5589, 1.05791 )
+shape = SubResource( 5 )
+
+[node name="block 4" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.117647, 0.443137, 0.54902, 1 )
+position = Vector2( 493, 154 )
+rotation = 1.5708
+scale = Vector2( 1.246, -1.179 )
+
+[node name="Area2D" type="Area2D" parent="block 4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block 4/Area2D"]
+scale = Vector2( 12.6202, 1.10216 )
+shape = SubResource( 6 )
+
+[node name="block 5" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.0313726, 0, 1, 1 )
+position = Vector2( 945, 226 )
+rotation = 1.5708
+scale = Vector2( 1.824, -1.179 )
+
+[node name="Area2D" type="Area2D" parent="block 5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block 5/Area2D"]
+scale = Vector2( 12.5833, 1.09205 )
+shape = SubResource( 7 )
+
+[node name="block 7" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.117647, 0.443137, 0.54902, 1 )
+position = Vector2( 795, 129 )
+rotation = 1.5708
+scale = Vector2( 1.043, -1.265 )
+
+[node name="Area2D" type="Area2D" parent="block 7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block 7/Area2D"]
+scale = Vector2( 12.6336, 1.0631 )
+shape = SubResource( 8 )
+
+[node name="block 8" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.117647, 0.443137, 0.54902, 1 )
+position = Vector2( 701, 126 )
+rotation = 1.5708
+scale = Vector2( 1.005, -1.233 )
+
+[node name="Area2D" type="Area2D" parent="block 8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block 8/Area2D"]
+scale = Vector2( 12.603, 1.11773 )
+shape = SubResource( 9 )
+
+[node name="block 6" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.117647, 0.443137, 0.54902, 1 )
+position = Vector2( 251, 110 )
+rotation = 1.5708
+scale = Vector2( 0.884, -1.227 )
+
+[node name="Area2D" type="Area2D" parent="block 6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block 6/Area2D"]
+scale = Vector2( 12.62, 1.07794 )
+shape = SubResource( 10 )
+
+[node name="Esquerra" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 1062, 299 )
+rotation = 1.5708
+scale = Vector2( 2.53501, 3.79274 )
+
+[node name="fons" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.152941, 0, 0.87451, 1 )
+self_modulate = Color( 0.266667, 0.352941, 0.941176, 1 )
+show_behind_parent = true
+position = Vector2( 569, 269 )
+scale = Vector2( 0.901, 0.963 )
+texture = ExtResource( 4 )
+
+[node name="inici2" type="Area2D" parent="."]
+visible = false
+position = Vector2( 76, 548 )
+
+[node name="tornar inici" type="CollisionShape2D" parent="inici2"]
+position = Vector2( 398.25, 69 )
+shape = SubResource( 1 )
+
+[node name="portal" type="Area2D" parent="."]
+
+[node name="portal" type="Sprite" parent="portal"]
+modulate = Color( 0, 0.27451, 1, 1 )
+show_behind_parent = true
+position = Vector2( 990, 569 )
+scale = Vector2( 0.0776697, 0.0735364 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]
+position = Vector2( 990, 570 )
+shape = SubResource( 11 )
+
+[connection signal="body_entered" from="block 1/Area2D" to="jon" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="block 2/Area2D" to="jon" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="block 3/Area2D" to="jon" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="block 4/Area2D" to="jon" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="block 5/Area2D" to="jon" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="block 7/Area2D" to="jon" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="block 8/Area2D" to="jon" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="block 6/Area2D" to="jon" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="inici2" to="jon" method="_on_inici2_body_entered"]
+[connection signal="body_entered" from="portal" to="jon" method="_on_portal_body_entered"]
